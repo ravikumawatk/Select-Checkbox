@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Checkbox Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .checkbox-container {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="checkbox-container">
+        <h3>Select your preferences</h3>
+        <input type="checkbox" class="checkAll"> Check All<br><br>
+        <input type="checkbox" class="checkItem" value="Item 1"> Item 1<br>
+        <input type="checkbox" class="checkItem" value="Item 2"> Item 2<br>
+        <input type="checkbox" class="checkItem" value="Item 3"> Item 3<br>
+        <br><br>
+        <button class="Selectto">Select box</button>
+    </div>
+
+    <script>
+        $('.checkAll').click(function () {    
+            $('.checkItem').prop('checked', this.checked);    
+        });
+
+        $('.checkItem').click(function () {
+            alert($(this).val());
+        });
+    </script>
+</body>
+</html>
